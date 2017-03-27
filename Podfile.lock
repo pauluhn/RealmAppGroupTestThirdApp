@@ -1,0 +1,16 @@
+PODS:
+  - RealmAppGroupTestFramework (0.1.0)
+
+DEPENDENCIES:
+  - RealmAppGroupTestFramework (from `../RealmAppGroupTestFramework`)
+
+EXTERNAL SOURCES:
+  RealmAppGroupTestFramework:
+    :path: ../RealmAppGroupTestFramework
+
+SPEC CHECKSUMS:
+  RealmAppGroupTestFramework: 153daf1a429a30625989303a596110236cde42df
+
+PODFILE CHECKSUM: 0491f5bf96295538dce62a8ded8ac6c9904fe9f0
+
+COCOAPODS: 1.2.1.beta.1
