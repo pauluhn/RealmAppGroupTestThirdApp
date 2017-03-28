@@ -388,6 +388,7 @@
 				D66F4F401E899EF8006F212F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
