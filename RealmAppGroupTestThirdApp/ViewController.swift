@@ -11,6 +11,10 @@ import RealmAppGroupTestFramework
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var fetchButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var writeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,5 +32,22 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func fetchButtonTapped(_ sender: Any) {
+        fetchButton.isEnabled = false
+        textField.text = nil
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.fetchButton.isEnabled = true
+            self.textField.text = SyncFetch.fetch()?.count.description
+        }
+    }
+    
+    @IBAction func writeButtonTapped(_ sender: Any) {
+        writeButton.isEnabled = false
+        SyncClient.add {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.writeButton.isEnabled = true
+            }
+        }
+    }
 }
 
