@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var writeButton: UIButton!
     @IBOutlet weak var syncOtherButton: UIButton!
     @IBOutlet weak var writeOtherButton: UIButton!
+    @IBOutlet weak var syncOtherRealmButton: UIButton!
+    @IBOutlet weak var writeOtherRealmButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,25 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             OtherModel(id: UUID().uuidString, name: UUID().uuidString).save {
                 self.writeOtherButton.isEnabled = true
+            }
+        }
+        
+    }
+    
+    @IBAction func syncOtherRealmButtonTapped(_ sender: Any) {
+        syncOtherRealmButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            SyncFetch.otherRealmFetch {
+                self.syncOtherRealmButton.isEnabled = true
+            }
+        }
+    }
+    
+    @IBAction func writeOtherRealmButtonTapped(_ sender: Any) {
+        writeOtherRealmButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            OtherModel(id: UUID().uuidString, name: UUID().uuidString).otherRealmSave {
+                self.writeOtherRealmButton.isEnabled = true
             }
         }
         
