@@ -50,14 +50,32 @@
                                     <action selector="writeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dSQ-M0-THX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wD7-oD-c86">
+                                <rect key="frame" x="16" y="629" width="77" height="30"/>
+                                <state key="normal" title="Sync Other"/>
+                                <connections>
+                                    <action selector="syncOtherButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFw-Oq-pFs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIU-Dd-cOd">
+                                <rect key="frame" x="279" y="629" width="80" height="30"/>
+                                <state key="normal" title="Write Other"/>
+                                <connections>
+                                    <action selector="writeOtherButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1YM-UY-Usn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YJS-Vj-k80" firstAttribute="top" secondItem="C0M-IV-Iyt" secondAttribute="bottom" constant="8" id="5i7-mp-nYd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wD7-oD-c86" secondAttribute="bottom" constant="8" id="7Lv-Ve-VvR"/>
+                            <constraint firstItem="wD7-oD-c86" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CpX-z0-gex"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JIU-Dd-cOd" secondAttribute="bottom" constant="8" id="QjD-j4-EIs"/>
                             <constraint firstItem="uc9-eh-O16" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tlq-ci-yKN"/>
                             <constraint firstItem="C0M-IV-Iyt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YHn-7W-5uo"/>
                             <constraint firstItem="C0M-IV-Iyt" firstAttribute="top" secondItem="uc9-eh-O16" secondAttribute="bottom" constant="8" id="cjZ-Ni-Fzo"/>
                             <constraint firstItem="oDS-mw-f6U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fvL-L1-jFc"/>
+                            <constraint firstItem="JIU-Dd-cOd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gLP-Hw-nU6"/>
                             <constraint firstItem="oDS-mw-f6U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.9" id="h8e-H0-dKu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C0M-IV-Iyt" secondAttribute="trailing" id="i2d-yU-mtF"/>
                             <constraint firstItem="uc9-eh-O16" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" id="m3d-9z-csa"/>
@@ -66,8 +84,10 @@
                     </view>
                     <connections>
                         <outlet property="fetchButton" destination="uc9-eh-O16" id="KxT-nx-aYp"/>
+                        <outlet property="syncOtherButton" destination="wD7-oD-c86" id="bHu-95-Znu"/>
                         <outlet property="textField" destination="C0M-IV-Iyt" id="ZdF-5G-pB1"/>
                         <outlet property="writeButton" destination="YJS-Vj-k80" id="rcD-GR-meW"/>
+                        <outlet property="writeOtherButton" destination="JIU-Dd-cOd" id="NUX-fu-RKO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

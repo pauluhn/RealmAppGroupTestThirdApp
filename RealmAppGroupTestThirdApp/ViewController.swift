@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var fetchButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var writeButton: UIButton!
-    
+    @IBOutlet weak var syncOtherButton: UIButton!
+    @IBOutlet weak var writeOtherButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,5 +51,23 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func syncOtherButtonTapped(_ sender: Any) {
+        syncOtherButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            SyncFetch.otherFetch {
+                self.syncOtherButton.isEnabled = true
+            }
+        }
+    }
+    
+    @IBAction func writeOtherButtonTapped(_ sender: Any) {
+        writeOtherButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            OtherModel(id: UUID().uuidString, name: UUID().uuidString).save {
+                self.writeOtherButton.isEnabled = true
+            }
+        }
+        
+    }
 }
-
