@@ -5,4 +5,5 @@ target 'RealmAppGroupTestThirdApp' do
 
   # Pods for RealmAppGroupTestThirdApp
   pod 'RealmAppGroupTestFramework', :path => '../RealmAppGroupTestFramework'
+  pod 'OneSignal'
 end
