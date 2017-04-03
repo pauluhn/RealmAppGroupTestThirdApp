@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var writeOtherButton: UIButton!
     @IBOutlet weak var syncOtherRealmButton: UIButton!
     @IBOutlet weak var writeOtherRealmButton: UIButton!
+    @IBOutlet weak var autoFetchButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +71,6 @@ class ViewController: UIViewController {
                 self.writeOtherButton.isEnabled = true
             }
         }
-        
     }
     
     @IBAction func syncOtherRealmButtonTapped(_ sender: Any) {
@@ -89,6 +89,30 @@ class ViewController: UIViewController {
                 self.writeOtherRealmButton.isEnabled = true
             }
         }
-        
+    }
+    
+    var isAutoFetch = false
+    var fetchObject: FetchObject?
+    @IBAction func autoFetchButtonTapped(_ sender: Any) {
+        autoFetchButton.isEnabled = false
+        isAutoFetch = !isAutoFetch
+        let title = "Auto Fetch " + (isAutoFetch ? "ON" : "OFF")
+        autoFetchButton.setTitle(title, for: .normal)
+        fetchButton.isEnabled = !isAutoFetch
+        guard isAutoFetch else {
+            self.autoFetchButton.isEnabled = true
+            fetchObject = nil
+            return
+        }
+        fetchObject = FetchObject {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                print("fetch updated")
+                self.textField.text = self.fetchObject?.results?.count.description
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.autoFetchButton.isEnabled = true
+            self.textField.text = self.fetchObject?.results?.count.description
+        }
     }
 }

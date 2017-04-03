@@ -31,8 +31,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uc9-eh-O16">
-                                <rect key="frame" x="167.5" y="352" width="39" height="30"/>
-                                <state key="normal" title="Fetch"/>
+                                <rect key="frame" x="16" y="352" width="79" height="30"/>
+                                <state key="normal" title="Fetch Once"/>
                                 <connections>
                                     <action selector="fetchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sa-Jg-pyp"/>
                                 </connections>
@@ -78,6 +78,13 @@
                                     <action selector="writeOtherRealmButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hq1-0q-QAZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fy-gy-Npv">
+                                <rect key="frame" x="252" y="352" width="107" height="30"/>
+                                <state key="normal" title="Auto Fetch OFF"/>
+                                <connections>
+                                    <action selector="autoFetchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="myQ-jY-Ff6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,10 +92,11 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wD7-oD-c86" secondAttribute="bottom" constant="8" id="7Lv-Ve-VvR"/>
                             <constraint firstItem="wD7-oD-c86" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CpX-z0-gex"/>
                             <constraint firstItem="GPV-0Y-N4t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="F7q-gf-6E0"/>
+                            <constraint firstItem="6fy-gy-Npv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NsX-IH-eXc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JIU-Dd-cOd" secondAttribute="bottom" constant="8" id="QjD-j4-EIs"/>
-                            <constraint firstItem="uc9-eh-O16" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tlq-ci-yKN"/>
                             <constraint firstItem="LVl-qA-5Ct" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XsF-dz-uoC"/>
                             <constraint firstItem="C0M-IV-Iyt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YHn-7W-5uo"/>
+                            <constraint firstItem="C0M-IV-Iyt" firstAttribute="top" secondItem="6fy-gy-Npv" secondAttribute="bottom" constant="8" id="ZuZ-tz-Udw"/>
                             <constraint firstItem="C0M-IV-Iyt" firstAttribute="top" secondItem="uc9-eh-O16" secondAttribute="bottom" constant="8" id="cjZ-Ni-Fzo"/>
                             <constraint firstItem="oDS-mw-f6U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fvL-L1-jFc"/>
                             <constraint firstItem="JIU-Dd-cOd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gLP-Hw-nU6"/>
@@ -98,9 +106,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="GPV-0Y-N4t" secondAttribute="trailing" id="m9R-sE-sXs"/>
                             <constraint firstItem="LVl-qA-5Ct" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pdS-tW-WdD"/>
                             <constraint firstItem="YJS-Vj-k80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pgo-WW-c1z"/>
+                            <constraint firstItem="uc9-eh-O16" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vYo-6G-EKA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="autoFetchButton" destination="6fy-gy-Npv" id="L5B-DH-2uj"/>
                         <outlet property="fetchButton" destination="uc9-eh-O16" id="KxT-nx-aYp"/>
                         <outlet property="syncOtherButton" destination="wD7-oD-c86" id="bHu-95-Znu"/>
                         <outlet property="syncOtherRealmButton" destination="LVl-qA-5Ct" id="GMn-rO-cJl"/>
