@@ -1,33 +1,39 @@
 PODS:
   - Alamofire (4.4.0)
   - OneSignal (2.4.3)
-  - Realm (2.5.0):
-    - Realm/Headers (= 2.5.0)
-  - Realm/Headers (2.5.0)
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm/Headers (2.7.0)
   - RealmAppGroupTestFramework (0.1.0):
     - Alamofire
     - RealmSwift
     - SwiftyJSON
-  - RealmSwift (2.5.0):
-    - Realm (= 2.5.0)
+  - RealmSwift (2.7.0):
+    - Realm (= 2.7.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - OneSignal
-  - RealmAppGroupTestFramework (from `../RealmAppGroupTestFramework`)
+  - RealmAppGroupTestFramework (from `https://github.com/pauluhn/RealmAppGroupTestFramework.git`, commit `e7015a3084`)
 
 EXTERNAL SOURCES:
   RealmAppGroupTestFramework:
-    :path: ../RealmAppGroupTestFramework
+    :commit: e7015a3084
+    :git: https://github.com/pauluhn/RealmAppGroupTestFramework.git
+
+CHECKOUT OPTIONS:
+  RealmAppGroupTestFramework:
+    :commit: e7015a3084
+    :git: https://github.com/pauluhn/RealmAppGroupTestFramework.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   OneSignal: 8e19e0baa263e07fe524fc7386d973ba51fc2459
-  Realm: 62abce501668580092d2be9b6ba7324a3d5f906a
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmAppGroupTestFramework: d86fd0a603ab090f34a8ebfa710da4e235256417
-  RealmSwift: 9f1a8f624f2f153410115c2cb7d486be9976565d
+  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 3d06eea4e33ed08bf2ef6ba5d625b9b4927e789c
+PODFILE CHECKSUM: e9af12c0535af240999ceb4b0b3bce2df705cd71
 
-COCOAPODS: 1.2.1.beta.1
+COCOAPODS: 1.2.1
