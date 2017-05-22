@@ -14,16 +14,16 @@ PODS:
 
 DEPENDENCIES:
   - OneSignal
-  - RealmAppGroupTestFramework (from `https://github.com/pauluhn/RealmAppGroupTestFramework.git`, commit `e7015a3084`)
+  - RealmAppGroupTestFramework (from `https://github.com/pauluhn/RealmAppGroupTestFramework.git`, commit `c8d07c560b`)
 
 EXTERNAL SOURCES:
   RealmAppGroupTestFramework:
-    :commit: e7015a3084
+    :commit: c8d07c560b
     :git: https://github.com/pauluhn/RealmAppGroupTestFramework.git
 
 CHECKOUT OPTIONS:
   RealmAppGroupTestFramework:
-    :commit: e7015a3084
+    :commit: c8d07c560b
     :git: https://github.com/pauluhn/RealmAppGroupTestFramework.git
 
 SPEC CHECKSUMS:
@@ -34,6 +34,6 @@ SPEC CHECKSUMS:
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: e9af12c0535af240999ceb4b0b3bce2df705cd71
+PODFILE CHECKSUM: 1111851b0bd089c06d4765b1c1e90ca9296cc957
 
 COCOAPODS: 1.2.1
